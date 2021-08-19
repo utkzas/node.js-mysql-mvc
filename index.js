@@ -10,6 +10,7 @@ const ports= process.env.PORT || 3000;
 
 //app.use(bodyParser.json()); deprecated
 app.use(express.json())
+
 app.use((req,res,next) => {
     res.setHeader('Access-Control-Allow-Origin','*');
     res.setHeader(
