@@ -17,4 +17,8 @@ module.exports = class Grocery {
     static update(id,item) {
         return db.execute('UPDATE groceries SET item = ? WHERE id = ?', [item,id]) //to prevent injection
     }
+
+    static delete(id) {
+        return db.execute('DELETE FROM groceries WHERE id=?',[id])
+    }
 };
